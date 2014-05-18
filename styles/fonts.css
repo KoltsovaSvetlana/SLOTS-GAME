@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Slackey';
+    src: url('../fonts/Slackey/Slackey.woff') format('woff'),
+    url('../fonts/Slackey/Slackey.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lightdot';
+    src: url('../fonts/Lightdot/Lightdot.eot');
+    src: url('../fonts/Lightdot/Lightdot.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lightdot/Lightdot.woff') format('woff'),
+         url('../fonts/Lightdot/Lightdot.ttf') format('truetype'),
+         url('../fonts/Lightdot/Lightdot.svg#Lightdot') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+Lightdot.ttf

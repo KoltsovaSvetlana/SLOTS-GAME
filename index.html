@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="interface" content="desktop" />
+        <title>Wild fruits</title>
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link rel="stylesheet" href="styles/fonts.css" />
+        <link rel="stylesheet" href="styles/slot.css" />
+    </head>
+    <body>
+        <div id="viewport">
+            <div id="leftDiv"></div>
+            <div id="rightDiv"></div>
+            <div id="container">
+                <div id="reels">
+                    <canvas id="canvas1"></canvas>
+                    <canvas id="canvas2"></canvas>
+                    <canvas id="canvas3"></canvas>
+                    <div id="overlay">
+                        <div id="winLine1" class="winLine"></div>
+                        <div id="winLine2" class="winLine"></div>
+                        <div id="winLine3" class="winLine"></div>
+                        <div id="winLine4" class="winLine"></div>
+                        <div id="winLine5" class="winLine"></div>
+                    </div>
+                </div>
+                <div id="resultsWindow">
+                    <div id="score">
+                        <span id="multiplier"> 0 </span> x <img src="img/coins.png">
+                    </div>
+                    <h2 id="status"></h2>
+                </div>
+                <div id="scoreWindow">
+                    <span>Your score is 0 coins!</span><br />
+                    <span>Please refill your score to continue playing!</span>
+                </div>
+                <div id="btnSpin" class="btnSpin "></div>
+            </div>  
+            <div id="balanceDiv">
+                <div id="resultDiv">
+                    <span id="balanceLbl">YOUR SCORE:</span>
+                    <span id="balance"></span>
+                </div>
+                <div id="add"><span>add coins</span></div>
+            </div>
+            <footer></footer>
+        </div>
+        <script src="libs/jquery/jquery-2.1.0.min.js"></script>
+         <!--[if IE]><script  src="libs/excanvas/excanvas.js"></script><![endif]-->
+        <script src="scripts/slot.js"></script>
+        <script>$(function() { SlotGame(); });</script>
+    </body>
+</html>

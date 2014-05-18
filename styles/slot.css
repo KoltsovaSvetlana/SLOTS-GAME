@@ -1,0 +1,331 @@
+ html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    min-width: 1030px;
+    min-height: 660px;
+} 
+
+#viewport {
+    background: #cdcdcd;
+    background: -moz-linear-gradient(#bbb,#eee,#bbb);
+    background: -webkit-linear-gradient(#bbb,#eee,#bbb);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#viewport.mobile {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#viewport.tablet {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#viewport.desktop {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#leftDiv {height: 100%;
+    width: 160px;
+    height: 100%;
+    margin-top: 10px;
+    float: left;
+    background-image: url('../img/coins_bg.png');
+}
+
+ #rightDiv {
+    width:160px;
+    height: 100%;
+    margin-top: 10px;
+    float:right;
+    background-image: url('../img/coins_bg.png');
+}
+
+@media screen and (max-width: 1320px) {
+    #leftDiv, #rightDiv{
+        width:8%;
+        height: 100%;
+        background-size: 100%;
+    }
+}
+
+
+@media screen and (max-width: 1190px) {
+    #leftDiv, #rightDiv{
+        width:6%;
+        height: 100%;
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    #leftDiv, #rightDiv{
+        width: 0px;
+        height: 0px;
+    }
+}
+
+
+#container {
+    width: 960px;
+    height: 480px;
+    position: relative;
+    margin: 10px auto 20px auto ;
+    background: url("../img/BG.png");
+    background-position: bottom center; 
+    border: 15px solid;
+    border-color: #777 #999 #666 #999;
+    box-shadow: inset 12px 20px 40px, inset -12px -12px 40px;
+    border-radius: 15px;
+}
+
+#container #reels {
+    position: relative;
+    width: 730px;
+    height: 480px;
+    overflow: hidden;
+    margin-left: 68px;
+}
+
+#container #reels canvas {
+    width: 237px;
+    height: 480px;
+    position: relative;
+    box-shadow: inset 0px 0px 37px hsl(271, 76%, 53%);
+    text-align: center;
+}
+
+#reels #overlay {
+    width: 98.5%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background: hsla(0, 53%, 90%, 0.2);  
+    display: none;
+}
+
+.winLine {
+    width: 710px;
+    height: 6px;
+    position: absolute;
+    background: white;
+    border: 5px solid rgb(140,246,235);
+    box-shadow: inset 0px 0px 2px rgb(140,246,235);
+    border-radius: 7px;
+}
+
+#reels #overlay #winLine1 {
+    top: 72px;
+    display: none;
+}
+
+#reels #overlay #winLine2 {
+    top: 232px;
+    display: none;
+}
+
+#reels #overlay #winLine3 {
+    bottom: 72px;
+    display: none;
+}
+
+#reels #overlay #winLine4 {
+    -webkit-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+    top: 230px;
+    left: -35px;
+    width: 780px;
+    display: none;
+}
+
+#reels #overlay #winLine5 {
+    -webkit-transform: rotate(145deg);
+    -o-transform: rotate(145deg);
+    -moz-transform: rotate(145deg);
+    -ms-transform: rotate(145deg);
+    transform: rotate(145deg);
+    top: 230px;
+    left: -35px;
+    width: 780px;
+    display: none;
+}
+
+#container #resultsWindow {
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    margin-left: -175px;
+    border: 9px double gold;
+    background: hsl(51, 95%, 87%);
+    border-radius: 15px;
+    font-family: Slackey; 
+    font-size: x-large;
+    display: none;   
+}
+
+#resultsWindow #score {
+    width: 116px;
+    margin: 51px auto 20px auto
+}
+
+#resultsWindow #status {
+    text-align: center;
+}
+
+#score img {
+    vertical-align: middle;
+}
+
+@-webkit-keyframes backlight {
+    0% { box-shadow: 0px 0px 45px red; -webkit-transform: rotate(72deg);}
+    25% { box-shadow: 0px 0px 30px red; -webkit-transform: rotate(144deg);}
+    50% { box-shadow: 0px 0px 60px black; -webkit-transform: rotate(216deg);}
+    75% { box-shadow: 0px 0px 45px greenyellow; -webkit-transform: rotate(288deg);}
+    100% { box-shadow: 0px 0px 35px greenyellow; -webkit-transform: rotate(360deg);}
+}
+
+@-o-keyframes backlight {
+    0% { box-shadow: 0px 0px 45px red; -o-transform: rotate(72deg);}
+    25% { box-shadow: 0px 0px 30px red; -o-transform: rotate(144deg);}
+    50% { box-shadow: 0px 0px 60px black; -o-transform: rotate(216deg);}
+    75% { box-shadow: 0px 0px 45px greenyellow; -o-transform: rotate(288deg);}
+    100% { box-shadow: 0px 0px 35px greenyellow; -o-transform: rotate(360deg);}
+}
+
+
+@-moz-keyframes backlight {
+    0% { box-shadow: 0px 0px 45px red; -moz-transform: rotate(72deg);}
+    25% { box-shadow: 0px 0px 30px red; -moz-transform: rotate(144deg);}
+    50% { box-shadow: 0px 0px 60px black; -moz-transform: rotate(216deg);}
+    75% { box-shadow: 0px 0px 45px greenyellow; -moz-transform: rotate(288deg);}
+    100% { box-shadow: 0px 0px 35px greenyellow; -moz-transform: rotate(360deg);}
+}
+
+
+@keyframes backlight {
+    0% { box-shadow: 0px 0px 45px red; transform: rotate(72deg);}
+    25% { box-shadow: 0px 0px 30px red; transform: rotate(144deg);}
+    50% { box-shadow: 0px 0px 60px black; transform: rotate(216deg);}
+    75% { box-shadow: 0px 0px 45px greenyellow; transform: rotate(288deg);}
+    100% { box-shadow: 0px 0px 35px greenyellow; transform: rotate(360deg);}
+}
+
+#scoreWindow {
+    width: 450px;
+    height: 190px;
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    margin-left: -225px;
+    padding-top: 60px;
+    border: 9px double red;
+    background: hsl(17, 95%, 87%);
+    border-radius: 15px;
+    text-align: center;
+    font-family: Slackey; 
+    font-size: 1.9em;
+    display: none;  
+    box-shadow: inset 0px 0px 15px red, 4px 4px 6px black;
+}
+
+#btnSpin {
+    width: 113px;
+    height: 113px;
+    position: absolute;
+    top: 154px;
+    right: 30px;
+    background-size:100%; 
+    border-radius: 50%;
+}
+
+.btnSpin {
+    background: url("../img/BTN_Spin.png");
+    -webkit-animation: backlight 0.4s ease infinite;
+    -o-animation: backlight 0.4s ease infinite;
+    -moz-animation: backlight 0.4s ease infinite;
+    animation: backlight 0.4s ease infinite;
+    border-right: 4px solid hsl(0, 0%, 0%);
+    cursor: pointer;
+}
+
+.btnSpinD  {
+    background: url("../img/BTN_Spin_d.png");
+    border-right: 4px solid grey;
+}
+
+#balanceDiv{
+    width: 990px;
+    position: relative;
+    margin: 10px auto;
+}
+
+#resultDiv {
+    width: 630px;
+    display: inline-block;
+    padding: 20px 15px;
+    margin-left: 0px;
+    border: 15px solid;
+    border-color: #777 #999 #666 #999;
+    border-radius: 15px;
+    background: #45484d; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #45484d 0%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  #45484d 0%,#000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  #45484d 0%,#000000 100%); /* IE10+ */
+    background: linear-gradient(45deg,  #45484d 0%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    font-family: Lightdot; 
+    font-size: 2.3em;
+    color: red;
+    box-shadow: inset 0px 0px 20px black;
+    text-shadow: 2px 2px 3px hsl(247, 54%, 30%);
+}
+
+#balance {
+    float: right;
+}
+
+#add {
+    width: 235px;
+    padding: 22px;
+    display: inline-block;
+    margin-left: 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    background: hsl(103, 57%, 37%);
+    font-family: Slackey;  
+    font-size: 2.3em;
+    color: red;
+    box-shadow: inset 1px 1px 40px yellow, 6px -6px 2px black, -1px 1px 2px black;
+    box-shadow: inset 0px 0px 20px black, 6px -6px 2px black, -1px 1px 2px black;
+    text-shadow: 2px 2px 3px hsl(247, 54%, 30%);
+}
+
+#add:hover {
+    box-shadow: inset 1px 1px 40px yellow, 6px -6px 2px black, -1px 1px 2px black;
+    cursor: pointer;
+}
+
+footer {
+    width: 1023px;;
+    height: 150px;
+    margin: 20px auto 0px auto;
+    background-image: url('../img/footer_bg.png');
+}
